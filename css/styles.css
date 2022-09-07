@@ -653,6 +653,51 @@ body {
   background-color: var(--brend-color);
 }
 
+/* mail-form */
+
+.footer-form {
+  display: flex;
+  width: 100%;
+}
+
+.mail-form-title {
+  color: var(--color-text-dark-theme);
+  margin-bottom: 20px;
+}
+
+.enter-mail {
+  display: inline-block;
+  align-items: center;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  margin-right: 12px;
+  background-color: #2f303a;
+  color: var(--color-text-dark-theme);
+  padding: 15px;
+}
+
+.send-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 28px;
+  width: 200px;
+  height: 50px;
+  background-color: var(--brend-color);
+  color: var(--color-text-dark-theme);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
+}
+
+.send-icon {
+  width: 100%;
+  height: 100%;
+  margin-left: 10px;
+}
+
 /* modal */
 
 .backdrop {
@@ -667,6 +712,12 @@ body {
     visibility var(--transition-dur-fun);
 }
 
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .modal {
   width: 528px;
   height: 581px;
@@ -674,7 +725,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: var(--color-text-dark-theme);
+  padding: 40px;
 }
 
 .btn-close-modal {
@@ -684,61 +736,133 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   margin-top: 8px;
   margin-right: 8px;
   background: var(--color-text-dark-theme);
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
+  transform: fill var(--transition-dur-fun);
 }
 
-.backdrop.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
+.modal-close-icon {
+  transition: fill var(--transition-dur-fun);
+}
+.centre {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-/* mail-form */
+.cta-title {
+  margin-bottom: 12px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  color: var(--primery-text-color);
+}
 
-.mail-form-title {
-  color: var(--color-text-dark-theme);
+.label-title {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--secondary-text-color);
+}
+
+.input-name,
+.input-phone,
+.input-mail {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding-left: 42px;
+  color: var(--primery-text-color);
+}
+
+.input-position {
+  position: relative;
+}
+
+.icon-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  margin: 11px;
+  transition: fill var(--transition-dur-fun);
+}
+
+.input-coment {
+  width: 100%;
+  height: 120px;
+  padding: 16px;
+}
+
+textarea {
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
   margin-bottom: 20px;
 }
-.enter-mail {
-  display: flex;
-  align-items: center;
-  width: 358px;
-  height: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  margin-right: 12px;
+
+.checkbox {
+  margin-right: 7px;
 }
 
-.input-form-mail {
+.polity {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71px;
+  letter-spacing: 0.03em;
   color: var(--secondary-text-color);
-  margin-left: 16px;
 }
 
-.send-btn {
-  display: flex;
-  align-items: center;
-  padding: 10px 10px 10px 28px;
+.checkbox-link {
+  color: var(--brend-color);
+}
+
+.agree {
+  margin-bottom: 30px;
+}
+
+.modal-btn-send {
+  /* display: block; */
   width: 200px;
   height: 50px;
-  background-color: var(--brend-color);
+  left: 700px;
+  top: 712px;
   color: var(--color-text-dark-theme);
+  background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  border: transparent;
+  border-color: transparent;
 }
 
-.footer-form {
-  display: flex;
+.centre {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.send-icon {
-  width: 100%;
-  height: 100%;
-  margin-left: 10px;
+.user-name {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.input-position:focus-within {
+  fill: var(--brend-color);
+}
+
+.btn-close-modal:hover .modal-close-icon,
+.btn-close-modal:focus .modal-close-icon {
+  fill: var(--brend-color);
 }
