@@ -590,6 +590,10 @@ body {
   align-items: baseline;
 }
 
+.footer-address {
+  width: 231px;
+}
+
 .address {
   font-style: normal;
 }
@@ -680,8 +684,6 @@ body {
 }
 
 .send-btn {
-  display: flex;
-  align-items: center;
   padding: 10px 28px;
   width: 200px;
   height: 50px;
@@ -690,6 +692,11 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: transparent;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: flex;
+  letter-spacing: 0.06em;
 }
 
 .send-icon {
@@ -759,8 +766,6 @@ body {
 .cta-title {
   margin-bottom: 12px;
   text-align: center;
-  font-style: normal;
-  font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   color: var(--primery-text-color);
@@ -813,7 +818,7 @@ textarea {
 }
 
 .checkbox {
-  margin-right: 7px;
+  appearance: none;
 }
 
 .polity {
@@ -865,4 +870,35 @@ textarea {
 .btn-close-modal:hover .modal-close-icon,
 .btn-close-modal:focus .modal-close-icon {
   fill: var(--brend-color);
+}
+
+/* test */
+
+.checkbox-svg {
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+}
+.polity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border: 2px solid var(--primery-text-color);
+  border-radius: 2px;
+}
+
+.checkbox:checked + .checkbox-icon {
+  border-color: var(--brend-color);
+  background-color: var(--brend-color);
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
 }
