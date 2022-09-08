@@ -637,7 +637,7 @@ body {
 .follow-icon-title {
   font-style: normal;
   font-weight: 700;
-  line-height: 16px;
+  line-height: 1.14;
   text-transform: uppercase;
   color: var(--color-text-dark-theme);
   margin-bottom: 20px;
@@ -665,6 +665,9 @@ body {
 }
 
 .mail-form-title {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
   color: var(--color-text-dark-theme);
   margin-bottom: 20px;
 }
@@ -681,6 +684,19 @@ body {
   background-color: #2f303a;
   color: var(--color-text-dark-theme);
   padding: 15px;
+  outline: none;
+  transition: border-color var(--transition-dur-fun);
+}
+
+.enter-mail::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.enter-mail:focus-within {
+  border-color: var(--brend-color);
 }
 
 .send-btn {
@@ -757,6 +773,7 @@ body {
 .modal-close-icon {
   transition: fill var(--transition-dur-fun);
 }
+
 .centre {
   align-items: center;
   justify-content: center;
@@ -764,6 +781,7 @@ body {
 }
 
 .cta-title {
+  font-weight: 700;
   margin-bottom: 12px;
   text-align: center;
   font-size: 20px;
@@ -788,6 +806,14 @@ body {
   margin-bottom: 10px;
   padding-left: 42px;
   color: var(--primery-text-color);
+  outline: none;
+  transition: border-color var(--transition-dur-fun);
+}
+
+.input-name:focus-within,
+.input-phone:focus-within,
+.input-mail:focus-within {
+  border-color: var(--brend-color);
 }
 
 .input-position {
@@ -812,6 +838,11 @@ body {
   width: 100%;
   height: 120px;
   padding: 16px;
+  outline: none;
+}
+
+.input-coment:focus-within {
+  border-color: var(--brend-color);
 }
 
 textarea {
@@ -821,8 +852,11 @@ textarea {
   margin-bottom: 20px;
 }
 
-.checkbox {
-  appearance: none;
+.input-coment::placeholder {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .polity {
@@ -891,11 +925,3 @@ textarea {
 .btn-close-modal:focus .modal-close-icon {
   fill: var(--brend-color);
 }
-
-/* test */
-
-/* .checkbox-svg {
-  width: 16px;
-  height: 15px;
-  margin-right: 7px;
-} */
