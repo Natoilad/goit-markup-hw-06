@@ -641,6 +641,11 @@
     <!-- form -->
     <div class="backdrop is-hidden" data-modal>
       <form class="modal">
+        <button type="button" class="btn-close-modal" data-modal-close>
+          <svg class="modal-close-icon" width="18px" height="18px">
+            <use href="./images/sprite.svg#modal-close-btn"></use>
+          </svg>
+        </button>
         <p class="cta-title">Залиште свої дані, ми вам передзвонимо</p>
         <label class="label-title" for="user-name"
           ><span class="label-name">Ім'я</span></label
@@ -720,11 +725,6 @@
 
           <button class="modal-btn-send" type="submit">Відправити</button>
         </div>
-        <button type="button" class="btn-close-modal" data-modal-close>
-          <svg class="modal-close-icon" width="18px" height="18px">
-            <use href="./images/sprite.svg#modal-close-btn"></use>
-          </svg>
-        </button>
       </form>
     </div>
     <script src="./js/modal.js"></script>
